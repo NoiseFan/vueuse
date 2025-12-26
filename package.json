@@ -24,7 +24,7 @@
     "publish:ci": "tsx scripts/publish.ts",
     "install-fonts": "gfi install Inter && gfi install Fira Code",
     "release": "bumpp --execute=\"npm run release:prepare\" --all",
-    "release:prepare": "npm run build:types && npm run update",
+    "release:prepare": "npm run build:types && npm run update && npm run size",
     "size": "tsx scripts/export-size.ts",
     "test": "nr test:unit",
     "test:cov": "vitest run --coverage --project=\"browser (chromium)\" --project=unit",
